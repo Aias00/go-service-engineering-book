@@ -1,0 +1,137 @@
+goroutine 49 [running]:
+runtime/pprof.writeGoroutineStacks({0x104a93460, 0x140000e6380})
+	/Users/aias/.local/share/go1.24.3/src/runtime/pprof/pprof.go:764 +0x6c
+runtime/pprof.writeGoroutine({0x104a93460?, 0x140000e6380?}, 0x140000fa848?)
+	/Users/aias/.local/share/go1.24.3/src/runtime/pprof/pprof.go:753 +0x2c
+runtime/pprof.(*Profile).WriteTo(0x104cbf2f0?, {0x104a93460?, 0x140000e6380?}, 0xc?)
+	/Users/aias/.local/share/go1.24.3/src/runtime/pprof/pprof.go:377 +0x14c
+net/http/pprof.handler.ServeHTTP({0x14000202011, 0x9}, {0x104a95a68, 0x140000e6380}, 0x140000d8640)
+	/Users/aias/.local/share/go1.24.3/src/net/http/pprof/pprof.go:272 +0x444
+net/http/pprof.Index({0x104a95a68, 0x140000e6380}, 0x140000d8640?)
+	/Users/aias/.local/share/go1.24.3/src/net/http/pprof/pprof.go:389 +0xc8
+net/http.HandlerFunc.ServeHTTP(0x104ccbdc0?, {0x104a95a68?, 0x140000e6380?}, 0x1048be9b4?)
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:2294 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x104a95a68, 0x140000e6380}, 0x140000d8640)
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:2822 +0x1b4
+net/http.serverHandler.ServeHTTP({0x140000acf90?}, {0x104a95a68?, 0x140000e6380?}, 0x1?)
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:3301 +0xbc
+net/http.(*conn).serve(0x140000aa750, {0x104a95d50, 0x14000101110})
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:2102 +0x52c
+created by net/http.(*Server).Serve in goroutine 23
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:3454 +0x3d8
+
+goroutine 1 [select]:
+main.run({0x104a95ff0, 0x140001063c0}, 0x140000102f0)
+	/Volumes/data/go-service-engineering-book/lab/cmd/service/main.go:85 +0x870
+main.main()
+	/Volumes/data/go-service-engineering-book/lab/cmd/service/main.go:31 +0x1e4
+
+goroutine 17 [syscall]:
+os/signal.signal_recv()
+	/Users/aias/.local/share/go1.24.3/src/runtime/sigqueue.go:149 +0x2c
+os/signal.loop()
+	/Users/aias/.local/share/go1.24.3/src/os/signal/signal_unix.go:23 +0x1c
+created by os/signal.Notify.func1.1 in goroutine 1
+	/Users/aias/.local/share/go1.24.3/src/os/signal/signal.go:152 +0x28
+
+goroutine 18 [select]:
+os/signal.NotifyContext.func1()
+	/Users/aias/.local/share/go1.24.3/src/os/signal/signal.go:289 +0x68
+created by os/signal.NotifyContext in goroutine 1
+	/Users/aias/.local/share/go1.24.3/src/os/signal/signal.go:288 +0x148
+
+goroutine 19 [select]:
+example.com/go-service-engineering/lab/internal/service.wait({0x104a95df8, 0x14000188070}, 0x1?)
+	/Volumes/data/go-service-engineering-book/lab/internal/service/app.go:105 +0xa0
+example.com/go-service-engineering/lab/internal/service.(*App).tasks.func1({0x104a95df8?, 0x14000188070?})
+	/Volumes/data/go-service-engineering-book/lab/internal/service/app.go:133 +0x60
+example.com/go-service-engineering/lab/internal/service.(*Pool).run(0x1400009a100, {0x0?, 0x140000ac510?})
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:87 +0x174
+example.com/go-service-engineering/lab/internal/service.NewPool.func1()
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:71 +0x70
+created by example.com/go-service-engineering/lab/internal/service.NewPool in goroutine 1
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:68 +0x184
+
+goroutine 20 [select]:
+example.com/go-service-engineering/lab/internal/service.wait({0x104a95df8, 0x1400009e150}, 0x1?)
+	/Volumes/data/go-service-engineering-book/lab/internal/service/app.go:105 +0xa0
+example.com/go-service-engineering/lab/internal/service.(*App).tasks.func1({0x104a95df8?, 0x1400009e150?})
+	/Volumes/data/go-service-engineering-book/lab/internal/service/app.go:133 +0x60
+example.com/go-service-engineering/lab/internal/service.(*Pool).run(0x1400009a100, {0x0?, 0x14000184300?})
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:87 +0x174
+example.com/go-service-engineering/lab/internal/service.NewPool.func1()
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:71 +0x70
+created by example.com/go-service-engineering/lab/internal/service.NewPool in goroutine 1
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:68 +0x184
+
+goroutine 21 [sync.WaitGroup.Wait]:
+sync.runtime_SemacquireWaitGroup(0x0?)
+	/Users/aias/.local/share/go1.24.3/src/runtime/sema.go:110 +0x2c
+sync.(*WaitGroup).Wait(0x140000a2000)
+	/Users/aias/.local/share/go1.24.3/src/sync/waitgroup.go:118 +0x70
+example.com/go-service-engineering/lab/internal/service.NewPool.func2()
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:75 +0x30
+created by example.com/go-service-engineering/lab/internal/service.NewPool in goroutine 1
+	/Volumes/data/go-service-engineering-book/lab/internal/service/pool.go:75 +0x240
+
+goroutine 22 [IO wait]:
+internal/poll.runtime_pollWait(0x105124ef8, 0x72)
+	/Users/aias/.local/share/go1.24.3/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x1400009a180?, 0x104762be8?, 0x0)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0x1400009a180)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_unix.go:620 +0x24c
+net.(*netFD).accept(0x1400009a180)
+	/Users/aias/.local/share/go1.24.3/src/net/fd_unix.go:172 +0x28
+net.(*TCPListener).accept(0x140000bc000)
+	/Users/aias/.local/share/go1.24.3/src/net/tcpsock_posix.go:159 +0x24
+net.(*TCPListener).Accept(0x140000bc000)
+	/Users/aias/.local/share/go1.24.3/src/net/tcpsock.go:380 +0x2c
+net/http.(*Server).Serve(0x140000c8000, {0x104a958e8, 0x140000bc000})
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:3424 +0x290
+main.run.func2()
+	/Volumes/data/go-service-engineering-book/lab/cmd/service/main.go:82 +0x30
+created by main.run in goroutine 1
+	/Volumes/data/go-service-engineering-book/lab/cmd/service/main.go:82 +0x6b4
+
+goroutine 23 [IO wait]:
+internal/poll.runtime_pollWait(0x105124de0, 0x72)
+	/Users/aias/.local/share/go1.24.3/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x1400009a200?, 0x104762be8?, 0x0)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0x1400009a200)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_unix.go:620 +0x24c
+net.(*netFD).accept(0x1400009a200)
+	/Users/aias/.local/share/go1.24.3/src/net/fd_unix.go:172 +0x28
+net.(*TCPListener).accept(0x140000bc040)
+	/Users/aias/.local/share/go1.24.3/src/net/tcpsock_posix.go:159 +0x24
+net.(*TCPListener).Accept(0x140000bc040)
+	/Users/aias/.local/share/go1.24.3/src/net/tcpsock.go:380 +0x2c
+net/http.(*Server).Serve(0x140000c8100, {0x104a958e8, 0x140000bc040})
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:3424 +0x290
+main.run.func3()
+	/Volumes/data/go-service-engineering-book/lab/cmd/service/main.go:83 +0x30
+created by main.run in goroutine 1
+	/Volumes/data/go-service-engineering-book/lab/cmd/service/main.go:83 +0x71c
+
+goroutine 50 [IO wait]:
+internal/poll.runtime_pollWait(0x105124cc8, 0x72)
+	/Users/aias/.local/share/go1.24.3/src/runtime/netpoll.go:351 +0xa0
+internal/poll.(*pollDesc).wait(0x1400009a580?, 0x140000acfa1?, 0x0)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_poll_runtime.go:84 +0x28
+internal/poll.(*pollDesc).waitRead(...)
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0x1400009a580, {0x140000acfa1, 0x1, 0x1})
+	/Users/aias/.local/share/go1.24.3/src/internal/poll/fd_unix.go:165 +0x1fc
+net.(*netFD).Read(0x1400009a580, {0x140000acfa1?, 0x1400004bf58?, 0x1048bec74?})
+	/Users/aias/.local/share/go1.24.3/src/net/fd_posix.go:55 +0x28
+net.(*conn).Read(0x140000c6070, {0x140000acfa1?, 0x0?, 0x0?})
+	/Users/aias/.local/share/go1.24.3/src/net/net.go:194 +0x34
+net/http.(*connReader).backgroundRead(0x140000acf90)
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:690 +0x40
+created by net/http.(*connReader).startBackgroundRead in goroutine 49
+	/Users/aias/.local/share/go1.24.3/src/net/http/server.go:686 +0xc4

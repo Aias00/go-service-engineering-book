@@ -1,0 +1,21 @@
+{
+  "title": "Go 服务工程：并发、资源管理与故障诊断",
+  "short_title": "Go 服务工程",
+  "subtitle": "从取消传播和有界并发，到可核查的退出与资源回收",
+  "author": "Aias00",
+  "lang": "zh-CN",
+  "repository": "Aias00/go-service-engineering-book",
+  "slug": "go-service-engineering-book",
+  "version": "1.0.0",
+  "date": "2026-10-21",
+  "description": "面向已经会写 Go HTTP 接口的后端开发者，以真实 HTTP 服务与后台 worker，实测 context、goroutine 所有权、过载、连接生命周期、慢客户端、SIGTERM 与 pprof。",
+  "cover_lines": [
+    "Go 服务工程",
+    "并发、资源管理",
+    "与故障诊断"
+  ],
+  "cover_label": "CANCEL · BOUND · DIAGNOSE",
+  "cover_subtitle": "Go 1.24.3 · 标准库 · 故障实验",
+  "include_code": true,
+  "rights": "© 2026 Aias00. 原创书稿保留所有权利；实验代码采用 MIT，详见 LICENSE。"
+}

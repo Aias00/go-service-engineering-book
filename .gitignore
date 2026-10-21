@@ -1,0 +1,13 @@
+site/
+.build/
+.tools/
+__pycache__/
+*.pyc
+node_modules/
+research/*.html
+research/*.pdf
+research/*.txt
+.DS_Store
+.venv*/
+lab/evidence/
+lab/*.test

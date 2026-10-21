@@ -1,0 +1,51 @@
+{
+  "accessed": "2026-10-21",
+  "policy": "Official documents fetched and relevant passages read; raw cache is not redistributed.",
+  "sources": [
+    {
+      "id": "go1.24",
+      "url": "https://go.dev/doc/go1.24",
+      "cache_sha256": "d35c2d52a864b3474451e28fb89bae013edba4adcc1fa7164796267c0e4ec4e7"
+    },
+    {
+      "id": "context-1.24.3",
+      "url": "https://pkg.go.dev/context@go1.24.3",
+      "cache_sha256": "ff4d6f4d445057f2a0a0f3d71b195cf0b11e652844dd41fce4331483a967853c"
+    },
+    {
+      "id": "http-1.24.3",
+      "url": "https://pkg.go.dev/net/http@go1.24.3",
+      "cache_sha256": "10f20a810be0b9e6629fa7ae52fffd917aade2d6e471d8b6bfe9f7f05d4ab844"
+    },
+    {
+      "id": "signal-1.24.3",
+      "url": "https://pkg.go.dev/os/signal@go1.24.3",
+      "cache_sha256": "ba3df6e108614cf6f80a7e9494167bc5b37bfbfdf211971660dc352ba50665af"
+    },
+    {
+      "id": "memory",
+      "url": "https://go.dev/ref/mem",
+      "cache_sha256": "2e47dc4df1c94a7f29d9ed4149dc162938dce70741bcf931645a851ea14fde4d"
+    },
+    {
+      "id": "race",
+      "url": "https://go.dev/doc/articles/race_detector",
+      "cache_sha256": "fdb0dade28b6d79ca38e24dab678552b4a29cf3b90647a63f493119aeba201f0"
+    },
+    {
+      "id": "pipelines",
+      "url": "https://go.dev/blog/pipelines",
+      "cache_sha256": "0cc4973f0649d8c13111a4fa45da100469bcf859a00d6375f1521cf2b95529fb"
+    },
+    {
+      "id": "diagnostics",
+      "url": "https://go.dev/doc/diagnostics",
+      "cache_sha256": "eadb233ef15b105d16806eb5f7281a775aea9bd615f11071b6b2f845133a08dd"
+    },
+    {
+      "id": "pprof-1.24.3",
+      "url": "https://pkg.go.dev/runtime/pprof@go1.24.3",
+      "cache_sha256": "3e16d5fe48ef1321ff95babc203afdee477b240532ef6c6ec1ab3bca57b56c7e"
+    }
+  ]
+}

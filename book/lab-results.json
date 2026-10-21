@@ -1,0 +1,30 @@
+{
+  "recorded": "2026-10-21",
+  "go_version": "go1.24.3 darwin/arm64",
+  "cpu": "Apple M4",
+  "dependencies": "Go standard library only",
+  "local_final_race": {
+    "command": "go test -race -v ./...",
+    "cmd_service": "PASS 3.075s",
+    "internal_service": "PASS 2.009s"
+  },
+  "repeat_failure_race": {
+    "iterations": 30,
+    "result": "PASS",
+    "seconds": 8.224
+  },
+  "repeat_sigterm_race": {
+    "iterations": 10,
+    "result": "PASS",
+    "seconds": 17.458
+  },
+  "benchmark_ns_per_op": [
+    950.9,
+    1218,
+    1176
+  ],
+  "benchmark_bytes_per_op": 304,
+  "benchmark_allocations_per_op": 8,
+  "scope": "Local work-pool microbenchmark, not production HTTP capacity. Real TCP and actual subprocess SIGTERM verified.",
+  "details": "lab/EXPERIMENTS.md"
+}
