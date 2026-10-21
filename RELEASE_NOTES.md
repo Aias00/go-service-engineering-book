@@ -1,7 +1,7 @@
-《Go 服务工程：并发、资源管理与故障诊断》首次完整版本。
+《Go 服务工程：并发、资源管理与故障诊断》v1.0.1。
 
-18章正文、前言与4个附录，覆盖取消传播、goroutine所有权、channel/锁、有界接纳、慢客户端、连接与响应体、后台任务、SIGTERM、race、pprof与故障排查。
+修正第2、8、16章的生命周期观察方法，并同步澄清第1、3、15章：`/stats`的active只统计Pool接纳的后台任务，不能用于证明`/work`或`/stream` handler已经退出。练习改用request finished/stream finished日志定位阶段，以及ServeHTTP返回后的finished通知或DrainRequests确认handler结束。
 
-随书标准库工程在Go1.24.3本机及Linux CI运行race、重复故障与真实子进程信号测试；EPUB、在线阅读、离线HTML与完整Markdown同源。实验ZIP解压后直接go test -race ./...。附件取自成功CI的原始artifact。
+本次真实子进程复核：五秒/work请求在客户端50ms预算下以curl退出码28结束，随即记录request finished/context canceled，再SIGTERM正常退出。实验工程接口与实现未变化。
 
-202仅表示进程内接纳，不持久化；基准为本机工作池局部成本，不代表生产容量。完整证据见仓库DELIVERY.md。
+18章正文、前言与4个附录仍完整保留；附件直接来自新一轮成功Linux CI，重跑race、故障30轮、真实SIGTERM10轮、基准/profile、独立ZIP、正文一致性、EPUBCheck及浏览器。v1.0.0保留原附件。最终哈希及公网证据见仓库DELIVERY.md。

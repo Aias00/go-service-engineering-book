@@ -9,6 +9,8 @@
 - [独立实验ZIP](https://aias00.github.io/go-service-engineering-book/downloads/lab.zip)
 - [版本发布](https://github.com/Aias00/go-service-engineering-book/releases)
 
+当前版本1.0.1修正了请求生命周期练习：`/stats`只统计后台任务，`/work`与`/stream`应使用阶段日志和handler返回通知观察。
+
 18章正文、前言、3个手写附录与1个构建时生成的完整代码附录。正文超过26000汉字，代码和附录不计入门槛。默认浅色，支持共享深色主题、目录、全文搜索、字号与无JavaScript阅读；正文同源生成网页、EPUB和离线HTML。
 
 ## 内容

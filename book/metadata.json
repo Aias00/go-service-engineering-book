@@ -6,7 +6,7 @@
   "lang": "zh-CN",
   "repository": "Aias00/go-service-engineering-book",
   "slug": "go-service-engineering-book",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-10-21",
   "description": "面向已经会写 Go HTTP 接口的后端开发者，以真实 HTTP 服务与后台 worker，实测 context、goroutine 所有权、过载、连接生命周期、慢客户端、SIGTERM 与 pprof。",
   "cover_lines": [
